@@ -1,4 +1,9 @@
 <?php 
+/*
+ * @package :   Ameex_Adminlog
+ * @author  :   Ameex
+ *
+ */
 class Ameex_Adminlog_Adminhtml_AdminlogController extends Mage_Adminhtml_Controller_Action
 {
 

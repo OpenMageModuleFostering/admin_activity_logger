@@ -1,6 +1,12 @@
 <?php
+/*
+ * @package :   Ameex_Adminlog
+ * @author  :   Ameex
+ *
+ */
 $installer = $this;
 $installer->startSetup();
+$installer->run("DROP TABLE IF EXISTS {$installer->getTable('adminlog_activities')};");
 $table = $installer->getConnection()->newTable($installer->getTable('adminlog/adminlog'))
         ->addColumn('id', Varien_Db_Ddl_Table::TYPE_INTEGER, 11, array(
             'unsigned'  => true,

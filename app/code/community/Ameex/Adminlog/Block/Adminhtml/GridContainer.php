@@ -1,4 +1,9 @@
 <?php
+/*
+ * @package :   Ameex_Adminlog
+ * @author  :   Ameex
+ *
+ */
 class Ameex_Adminlog_Block_Adminhtml_GridContainer extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
 	public function __construct()

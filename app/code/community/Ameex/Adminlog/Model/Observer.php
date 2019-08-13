@@ -1,11 +1,17 @@
 <?php
+/*
+ * @package :   Ameex_Adminlog
+ * @author  :   Ameex
+ *
+ */
 
 class Ameex_Adminlog_Model_Observer
 {
 
 	public function getLog()
 	{
-        //echo "<pre>";
+		/*get the current path details */
+		
         $request = Mage::app()->getRequest();
 		$actionName = $request->getActionName();
         $controllerName = $request->getControllerName();
@@ -18,13 +24,13 @@ class Ameex_Adminlog_Model_Observer
 
 			$adminlog = Mage::getModel('adminlog/adminlog');
 			$dynamicValues = $this->_getDynamicValues($controllerName);
-            //print_r($dynamicValues);
 			$currentId = $request->getParam($dynamicValues[0]);
 	    	$storeId =  $request->getParam('store');
 			$store = Mage::getModel('core/store')->load($storeId);
 
 			if ($user) {
-
+                /* Get the user details */
+                  
 				$data['user_id'] = $user->getUserId();
 				$data['user_email'] = $user->getEmail();
 				$data['remote_ip'] = Mage::helper('core/http')->getRemoteAddr();
@@ -38,20 +44,20 @@ class Ameex_Adminlog_Model_Observer
 				if (!empty($dynamicValues)) {
 		    		if (($actionName == "save") && ($dynamicValues[1] == "catalog/product")) {
 		    			$product = $request->getParam('product');
-						echo $data['additional_info'] = $dynamicValues[3] . $product['sku'];
+						$data['additional_info'] = $dynamicValues[3] . $product['sku'];
 		    		} elseif (($actionName == "save") && ($dynamicValues[1] == "customer/customer")) {
-						echo $account = $request->getParam('account');
-						echo $data['additional_info'] = $dynamicValues[3] . $account['firstname'] . " " . $account['lastname'];
+						$account = $request->getParam('account');
+						$data['additional_info'] = $dynamicValues[3] . $account['firstname'] . " " . $account['lastname'];
 		    		} elseif ($actionName == "save") {
-		    			echo $data['additional_info'] = $dynamicValues[3] . $request->getParam($dynamicValues[4]);
+		    			$data['additional_info'] = $dynamicValues[3] . $request->getParam($dynamicValues[4]);
 		    		} elseif (($actionName == "new")) {
-		    		 	echo $data['additional_info'] = "Tried to create a new " . $entity;
+		    		 	$data['additional_info'] = "Tried to create a new " . $entity;
 		    		} elseif (($actionName == "duplicate")) {
 		    			$productId = $request->getParam('id');
 		    			$_product = Mage::getModel('catalog/product')->load($productId);  
-						echo $data['additional_info'] = "Duplicated the " . $entity." ".$_product['sku'];
+						$data['additional_info'] = "Duplicated the " . $entity." ".$_product['sku'];
 		    		} elseif (($actionName == "delete")) {
-		    		 	echo $data['additional_info'] = "Deleted the " . $entity;
+		    		 	$data['additional_info'] = "Deleted the " . $entity;
 		    		}
 
 		    	} else {
@@ -88,6 +94,8 @@ class Ameex_Adminlog_Model_Observer
 
     public function cleanLog($observer)
     {
+		/* log maintain details */
+		
      	$isExpire = Mage::getStoreConfig('adminlog_options/adminlog_group/adminlog_expire');
 		$time = time();
 		$to = date('Y-m-d H:i:s', $time);
@@ -107,9 +115,10 @@ class Ameex_Adminlog_Model_Observer
 
     protected function _isLogNeeded($actionName, $implodedControllerName)
     {
+		/*Filter the log actions */
+		
     	$isActive = Mage::getStoreConfig('adminlog_options/adminlog_group/adminlog_enable');
     	$excludedActions = array('index','validate','edit','grid');
-
     	return (($isActive == 1) && !in_array($actionName, $excludedActions) && ($implodedControllerName != 'Adminlog'));
     }
 
