@@ -101,9 +101,9 @@ class Ameex_Adminlog_Model_Observer
 		$to = date('Y-m-d H:i:s', $time);
 		$logs = Mage::getResourceModel('adminlog/adminlog_collection')
 				    ->addFieldToSelect('id')
-				    ->addFieldToSelect('viewed_at');
+				    ->addFieldToSelect('logged_at');
 	    foreach ($logs as $log) {
-    		$time1 = new DateTime($log->getViewedAt());
+    		$time1 = new DateTime($log->getLoggedAt());
 			$time2 = new DateTime($to);
 			$interval = $time1->diff($time2);
 			$daysExpire = $interval->d;

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>Admin_Activity_Logger</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license>Open Software License (OSL)</license>
     <channel>community</channel>
     <extends/>
     <summary>Admin activity logger module is used to monitoring the admin user activities.</summary>
     <description>Admin activity logger module is used to monitoring the admin user activities. so that we can monitor the every admin user activities and also find the modified contents.</description>
-    <notes>Fixed cron job issue and header already exists issue.</notes>
+    <notes>Fixed cron job issue : Column not found issue</notes>
     <authors><author><name>commercebees</name><user>CommerceBees</user><email>commercebees@ameexusa.com</email></author><author><name>parthipan p</name><user>parthipan_ameex</user><email>p.parthi001@gmail.com</email></author></authors>
-    <date>2015-10-20</date>
-    <time>08:58:51</time>
-    <contents><target name="magecommunity"><dir><dir name="Ameex"><dir name="Adminlog"><dir><dir name="Block"><dir name="Adminhtml"><dir name="GridContainer"><file name="Grid.php" hash="1d0f382c80e57b9d5276e85cd5d53e09"/></dir><file name="GridContainer.php" hash="b845a89ec73c516cd9f2a6f4be32dd8f"/></dir></dir><dir name="Helper"><file name="Data.php" hash="5eab681f0eb45807ef4d87934eba8723"/></dir><dir name="Model"><file name="Adminlog.php" hash="30e1ee8eabebf9f41a6611505bfd8c9c"/><file name="Observer.php" hash="da25905a691c84d89ceaad11f21677c8"/><dir name="Resource"><dir name="Adminlog"><file name="Collection.php" hash="6faf91265240d9d93eea1117c14389d2"/></dir><file name="Adminlog.php" hash="d2439dfa1eca2e7fa12adee995b7a3e5"/><file name="Setup.php" hash="7f24e18c0633dec4938f18d08ceac718"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="AdminlogController.php" hash="2bcb8d853925259d0b3ceb54a1be62ff"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="cb4c5949af74421c60157761dc9421c3"/><file name="config.xml" hash="0c8fc1881640496d88fb057514d214df"/><file name="system.xml" hash="966a805470a697d1e3387da4f3bad3c0"/></dir><dir name="sql"><dir name="adminlog_setup"><file name="install-1.0.1.php" hash="8c4d4ddf7bcc8e2a29d06c017a9c2983"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="Ameex_Adminlog.xml" hash="1cfc4192209af809e8baee26113de620"/></dir></dir></target><target name="mage"><dir><dir><file name="CommerceBees_Admin_Activity_Logger_Extension_Guide_V1.0.1 .pdf" hash="40f9079c679b12bcefb247bb241194b9"/></dir></dir></target></contents>
+    <date>2016-02-10</date>
+    <time>16:35:01</time>
+    <contents><target name="magecommunity"><dir><dir name="Ameex"><dir name="Adminlog"><dir><dir name="Block"><dir name="Adminhtml"><dir name="GridContainer"><file name="Grid.php" hash="1d0f382c80e57b9d5276e85cd5d53e09"/></dir><file name="GridContainer.php" hash="b845a89ec73c516cd9f2a6f4be32dd8f"/></dir></dir><dir name="Helper"><file name="Data.php" hash="5eab681f0eb45807ef4d87934eba8723"/></dir><dir name="Model"><file name="Adminlog.php" hash="30e1ee8eabebf9f41a6611505bfd8c9c"/><file name="Observer.php" hash="cd8197d086f262ccb908e453f266a628"/><dir name="Resource"><dir name="Adminlog"><file name="Collection.php" hash="6faf91265240d9d93eea1117c14389d2"/></dir><file name="Adminlog.php" hash="d2439dfa1eca2e7fa12adee995b7a3e5"/><file name="Setup.php" hash="7f24e18c0633dec4938f18d08ceac718"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="AdminlogController.php" hash="2bcb8d853925259d0b3ceb54a1be62ff"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="cb4c5949af74421c60157761dc9421c3"/><file name="config.xml" hash="0c8fc1881640496d88fb057514d214df"/><file name="system.xml" hash="966a805470a697d1e3387da4f3bad3c0"/></dir><dir name="sql"><dir name="adminlog_setup"><file name="install-1.0.1.php" hash="8c4d4ddf7bcc8e2a29d06c017a9c2983"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="Ameex_Adminlog.xml" hash="1cfc4192209af809e8baee26113de620"/></dir></dir></target><target name="mage"><dir name="."><file name="CommerceBees_Admin_Activity_Logger_Extension_Guide_V1.0.2 .pdf" hash="40f9079c679b12bcefb247bb241194b9"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
