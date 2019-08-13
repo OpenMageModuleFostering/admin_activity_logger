@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Ameex_Adminlog>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ameex_Adminlog>
+    </modules>
+</config>

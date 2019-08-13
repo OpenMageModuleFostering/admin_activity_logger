@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<config>
+    <tabs>
+        <adminlogconfig translate="label" module="adminlog">
+            <label>Admin log configuration</label>
+            <sort_order>1000</sort_order>
+        </adminlogconfig>
+    </tabs> 
+    <sections>
+        <adminlog_options translate="label" module="adminlog">
+            <label>Admin log manager</label>
+            <tab>adminlogconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+            <groups>
+                <adminlog_group translate="label">
+                    <label>Adminlog config fields</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <adminlog_enable>
+                            <label>Enable admin log module</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                    
+                        </adminlog_enable>
+                        <adminlog_expire>
+                            <label>Delete log records after X days</label>
+                            <comment>You can specify the number of days you want to maintain the logs</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                    
+                        </adminlog_expire>
+                    </fields>                 
+                </adminlog_group>
+            </groups>
+        </adminlog_options>
+    </sections>     
+</config>

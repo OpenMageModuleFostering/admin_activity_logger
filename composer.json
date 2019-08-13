@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Admin_Activity_Logger",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Admin activity logger module is used to monitoring the admin user activities.",
+    "authors": [
+    {
+        "name": "commercebees",
+        "email": "commercebees@ameexusa.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
